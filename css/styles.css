@@ -14,7 +14,6 @@
 }
 
 
-
 body {
     /* background: linear-gradient(#5EAFDC, #23222F); */
     /* Style for the background */
@@ -70,15 +69,17 @@ body {
     /* overflow-y: 'hidden' */
 }
 
-#helal-logo {
-    background-color: #000;
-    opacity: 0.7;
 
-}
+/* Styles for the header */
 .logo {
     padding: 10px 5px;
     display: flex;
     width: 100%;
+    /* cursor: none; */
+}
+#helal-logo {
+    background-color: #000;
+    opacity: 0.7;
 
 }
 .head {
@@ -89,11 +90,17 @@ body {
     display: block;
     width: 100%;
 }
+/* End Styles for the header */
+/* ----------------------------- */
+/* ----------------------------- */
+
+/* Start styles for the output screen */
 /* Screen for show the count number */
 .screen {
     padding: 10px 50px ;
     font-weight: bolder;
     text-align: center;
+    cursor: none;
 
     /* border: 2px solid red; */
     /* background-color: rgb(44, 38, 38); */
@@ -108,6 +115,8 @@ body {
     font-size: 3em;
 
 }
+/* End Styles for the output screen  */
+/* ---------------------------------------- */
 /* Sub-container of the words */
 .cards {
     position: relative;
@@ -130,8 +139,34 @@ body {
     border-left: 2px solid #e6e6e6;
     border-bottom: 2px solid #e6e6e6;
     border-radius: 20%;
-    
+    cursor: pointer;
     /* color: ; */
+
+}
+.word:active {
+    background-color: #23222f;
+    color:#fff;
+
+    border-top: 2px solid #e6e6e6;
+    border-right: 2px solid #e6e6e6;
+}
+#clear {
+    background-color: #de0000;
+    color: #fcf;
+    position: absolute;
+    bottom: -20px;
+    padding: 1px 0.1em;
+    
+    border-left: 2px solid #f55353;
+    border-bottom: 2px solid #f55353;
+
+
+}
+#clear:active {
+    border-top: 2px solid #f55353;
+    border-right: 2px solid #f55353;
+
+    padding: 0 0.2em;
 
 }
 .footer {
@@ -151,12 +186,6 @@ body {
 
 
 }
-/* .footer p:last-child {
-    text-decoration: underline;
-    padding: 4px 0;
-}
-
- */
 ul {
     list-style: none;
     text-align: center;
