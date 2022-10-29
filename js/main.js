@@ -41,23 +41,23 @@ function vibrate(t) {
  * Start making an event listeners to the buttons "Words"
  */
 word1.addEventListener('click', (e) => {
-    vibrate(50);
+    vibrate(30);
 });
 
 
 
 word2.addEventListener('click', (e) => {
-    vibrate(50);
+    vibrate(30);
 });
 
 
 word3.addEventListener('click', (e) => {
-    vibrate(50);
+    vibrate(30);
 });
 
 
 clearBtn.addEventListener('click', (e) => {
-    vibrate(150);
+    vibrate(45);
 });
 /**
  * End making an event listeners to the buttons "Words"
