@@ -5,6 +5,7 @@
 /**
  * Start with global variables
  */
+let count = 0;
 // Get the three words, the clear button
 const word1 = document.getElementsByClassName('word')[0];
 const word2 = document.getElementsByClassName('word')[1];
@@ -70,6 +71,7 @@ clearBtn.addEventListener('click', (e) => {
 clearBtn.addEventListener('click', (event) => {
     curentWord.innerText = "";
     counter.innerText = '0';
+    count = 0;
 } )
 /**
  * End Adding function to the clear button
@@ -104,7 +106,7 @@ word3.addEventListener('click', (event) => {
  * Start making function for the counter
  */
 // Increamnet function 
-let count = 0;
+
 function increment() {
     count += 1
     if (count.innerText == 33) {
