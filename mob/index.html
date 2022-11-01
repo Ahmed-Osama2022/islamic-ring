@@ -304,7 +304,13 @@ function vibrate(t) {
 /**
  * Start making an event listeners to the buttons "Words"
  */
-word[0,1,2].addEventListener('click', (e) => {
+word[0].addEventListener('click', (e) => {
+    vibrate(30);
+});
+word[1].addEventListener('click', (e) => {
+    vibrate(30);
+});
+word[2].addEventListener('click', (e) => {
     vibrate(30);
 });
 
