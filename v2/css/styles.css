@@ -1,0 +1,220 @@
+/* This is the second version from the application */ 
+
+/*
+    Adding font from 'google fonts' after downloaded 
+    And import it to the page.
+*/
+
+@font-face {
+    font-family: 'Noto-arabic';
+    src: url('../Noto_Naskh_Arabic/static/NotoNaskhArabic-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /* background: linear-gradient(#5EAFDC, #23222F); */
+    /* Style for the background */
+    background: 
+    linear-gradient(
+        0deg,
+        hsl(245deg 16% 16%) 0%,
+        hsl(222deg 34% 20%) 11%,
+        hsl(217deg 45% 23%) 22%,
+        hsl(214deg 53% 25%) 33%,
+        hsl(213deg 59% 27%) 44%,
+        hsl(211deg 64% 29%) 56%,
+        hsl(211deg 68% 30%) 67%,
+        hsl(210deg 72% 32%) 78%,
+        hsl(209deg 76% 33%) 89%,
+        hsl(208deg 80% 34%) 100%
+    );
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /* End style the background */
+    
+    color: #F9F9F9;
+
+    font-family: 'Noto-arabic';
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    overflow-y: hidden;
+
+}
+.container {
+    /* margin-top: 15vh; */
+    max-width: 480px;
+    width: 100%;
+    background-color: rgba(99, 168, 230, 0.4) ;
+
+    margin-top: 1.5em;
+    padding: 20px 10px;
+    
+    border-radius: 27px;
+    box-shadow: rgba(0,0,0, 1);
+    border: 3px solid rgba(90, 161, 224, 0.7);
+    /* overflow-y: 'hidden' */
+}
+
+
+/* Styles for the header */
+#version {
+    text-align: center;
+    width: 100%;
+    color: #ddd;
+    text-shadow: 0 0 5px #000;
+
+    margin: -8px 0 -10px;
+
+}
+.logo {
+    padding: 10px 5px;
+    display: flex;
+    width: 100%;
+    /* cursor: none; */
+}
+#helal-logo {
+    background-color: #000;
+    opacity: 0.7;
+
+}
+.head {
+    font-size: 1.3em;
+    /* padding-left: 50%; */
+    /* margin-left: calc( / 2 ); */
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-left: -10px;
+}
+/* End Styles for the header */
+/* ----------------------------- */
+/* ----------------------------- */
+
+/* Start styles for the output screen */
+/* Screen for show the count number */
+.screen {
+    padding: 10px 50px ;
+    font-weight: bolder;
+    text-align: center;
+    cursor: none;
+    user-select: none;
+
+    /* border: 2px solid red; */
+    /* background-color: rgb(44, 38, 38); */
+    background-color: rgb(64, 58, 58);
+
+
+}
+.screen p:first-child {
+    font-size: 1em;
+}
+.screen p:last-child {
+    font-size: 3em;
+
+}
+/* End Styles for the output screen  */
+/* ---------------------------------------- */
+/* Sub-container of the words */
+.cards {
+    position: relative;
+    height: 20%;
+    width: 100%; 
+    padding: 30px 0;
+    /* background-color: #099; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+.word {
+    padding: 0 0.3em;
+    margin: 4px 10px; 
+    font-size: 1.3em;
+
+    border-left: 2px solid #e6e6e6;
+    border-bottom: 2px solid #e6e6e6;
+    border-radius: 20%;
+    cursor: pointer;
+    /* color: ; */
+    user-select: none;
+
+}
+.word:active {
+    background-color: #23222f;
+    color:#fff;
+
+    border-top: 2px solid #e6e6e6;
+    border-right: 2px solid #e6e6e6;
+}
+#clear {
+    background-color: #de0000;
+    color: #fcf;
+    position: absolute;
+    bottom: -20px;
+    padding: 1px 0.1em;
+    
+    border-left: 2px solid #f55353;
+    border-bottom: 2px solid #f55353;
+
+
+}
+#clear:active {
+    border-top: 2px solid #f55353;
+    border-right: 2px solid #f55353;
+
+    padding: 0 0.2em;
+
+}
+.footer {
+    padding: 16px 0;
+    position: fixed;
+    bottom: 0;
+    width: 480px;
+    background-color: #000;
+    border-radius: 22px;
+
+}
+.footer p {
+    text-align: right;
+    font-size: 0.7em;
+    text-align: center;
+    color: whitesmoke;
+
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+#telephone {
+    font-size: 10pt;
+    color: blue;
+    text-decoration: none;
+    /* margin-top: 10px; */
+
+}
+
+#telephone:hover {
+    font-size: 12pt;
+    text-shadow: #0000fc 3px 3px 5px;
+    transition: ease 0.2s all;
+
+}
