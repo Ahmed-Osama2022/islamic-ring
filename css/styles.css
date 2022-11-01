@@ -101,6 +101,7 @@ body {
     font-weight: bolder;
     text-align: center;
     cursor: none;
+    user-select: none;
 
     /* border: 2px solid red; */
     /* background-color: rgb(44, 38, 38); */
@@ -141,6 +142,7 @@ body {
     border-radius: 20%;
     cursor: pointer;
     /* color: ; */
+    user-select: none;
 
 }
 .word:active {
