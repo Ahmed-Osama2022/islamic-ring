@@ -100,7 +100,7 @@ body {
     /* margin-left: calc( / 2 ); */
     text-align: center;
     display: block;
-    width: 100%;
+    width: 95%;
     margin-left: -10px;
 }
 /* End Styles for the header */
@@ -188,7 +188,7 @@ body {
     padding: 16px 0;
     position: fixed;
     bottom: 0;
-    width: 480px;
+    width: 100%;
     background-color: #000;
     border-radius: 22px;
 
