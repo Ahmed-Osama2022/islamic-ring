@@ -206,3 +206,9 @@ ul {
     transition: ease 0.2s all;
 
 }
+#telephone img {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 8px;
+    opacity: 0.85;
+}
