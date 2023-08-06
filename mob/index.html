@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,12 @@
     <meta name="keywords" content="خاتم تسبيح الكتروني, خاتم تسبيح, تسبيح">
     <meta name="author" content="Ahmed Osama Elsayed">
     <!-- <meta http-equiv="refresh" content="2"> -->
-    <link rel="icon" href="./images/Helal-logo.jpg">
+    <link rel="icon" href="./images/logo.jpg">
+
+    <!-- ================== PWA ========================= -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <!-- ===================================================== -->
 
     <title>خاتم التسبيح</title>
 
@@ -18,234 +24,249 @@
     And import it to the page.
 */
 
-@font-face {
-    font-family: 'Noto-arabic';
-    src: url('./Noto_Naskh_Arabic/static/NotoNaskhArabic-Regular.ttf');
-}
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+        @font-face {
+            font-family: 'Noto-arabic';
+            src: url('./Noto_Naskh_Arabic/static/NotoNaskhArabic-Regular.ttf');
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
 
-body {
-    /* background: linear-gradient(#5EAFDC, #23222F); */
-    /* Style for the background */
-    background: 
-    linear-gradient(
-        0deg,
-        hsl(245deg 16% 16%) 0%,
-        hsl(222deg 34% 20%) 11%,
-        hsl(217deg 45% 23%) 22%,
-        hsl(214deg 53% 25%) 33%,
-        hsl(213deg 59% 27%) 44%,
-        hsl(211deg 64% 29%) 56%,
-        hsl(211deg 68% 30%) 67%,
-        hsl(210deg 72% 32%) 78%,
-        hsl(209deg 76% 33%) 89%,
-        hsl(208deg 80% 34%) 100%
-    );
-    background-size: cover;
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+        body {
+            /* background: linear-gradient(#5EAFDC, #23222F); */
+            /* Style for the background */
+            background:
+                linear-gradient(0deg,
+                    hsl(245deg 16% 16%) 0%,
+                    hsl(222deg 34% 20%) 11%,
+                    hsl(217deg 45% 23%) 22%,
+                    hsl(214deg 53% 25%) 33%,
+                    hsl(213deg 59% 27%) 44%,
+                    hsl(211deg 64% 29%) 56%,
+                    hsl(211deg 68% 30%) 67%,
+                    hsl(210deg 72% 32%) 78%,
+                    hsl(209deg 76% 33%) 89%,
+                    hsl(208deg 80% 34%) 100%);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
 
-    -webkit-background-size: cover; 
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    /* End style the background */
-    
-    color: #F9F9F9;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            /* End style the background */
 
-    font-family: 'Noto-arabic';
+            color: #F9F9F9;
 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    overflow-y: hidden;
+            font-family: 'Noto-arabic';
 
-}
-.container {
-    /* margin-top: 15vh; */
-    max-width: 480px;
-    width: 100%;
-    background-color: rgba(99, 168, 230, 0.4) ;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            overflow-y: hidden;
 
-    margin-top: 1.5em;
-    padding: 20px 10px;
-    
-    border-radius: 27px;
-    box-shadow: rgba(0,0,0, 1);
-    border: 3px solid rgba(90, 161, 224, 0.7);
-    /* overflow-y: 'hidden' */
-}
+        }
 
+        .container {
+            /* margin-top: 15vh; */
+            max-width: 480px;
+            width: 100%;
+            background-color: rgba(99, 168, 230, 0.4);
 
-/* Styles for the header */
-#version {
-    text-align: center;
-    width: 100%;
-    color: #ddd;
-    text-shadow: 0 0 5px #000;
+            margin-top: 1.5em;
+            padding: 20px 10px;
 
-    margin: -8px 0 -10px;
-}
-.logo {
-    padding: 10px 5px;
-    display: flex;
-    width: 100%;
-    /* cursor: none; */
-}
-#helal-logo {
-    background-color: #000;
-    opacity: 0.7;
-
-}
-.head {
-    font-size: 1.3em;
-    /* padding-left: 50%; */
-    /* margin-left: calc( / 2 ); */
-    text-align: center;
-    display: block;
-    width: 100%;
-}
-/* End Styles for the header */
-/* ----------------------------- */
-/* ----------------------------- */
-
-/* Start styles for the output screen */
-/* Screen for show the count number */
-.screen {
-    padding: 10px 50px ;
-    font-weight: bolder;
-    text-align: center;
-    cursor: none;
-    user-select: none;
-
-    /* border: 2px solid red; */
-    /* background-color: rgb(44, 38, 38); */
-    background-color: rgb(64, 58, 58);
+            border-radius: 27px;
+            box-shadow: rgba(0, 0, 0, 1);
+            border: 3px solid rgba(90, 161, 224, 0.7);
+            /* overflow-y: 'hidden' */
+        }
 
 
-}
-.screen p:first-child {
-    font-size: 1em;
-}
-.screen p:last-child {
-    font-size: 3em;
+        /* Styles for the header */
+        #version {
+            text-align: center;
+            width: 100%;
+            color: #ddd;
+            text-shadow: 0 0 5px #000;
 
-}
-/* End Styles for the output screen  */
-/* ---------------------------------------- */
-/* Sub-container of the words */
-.cards {
-    position: relative;
-    height: 20%;
-    width: 100%; 
-    padding: 30px 0;
-    /* background-color: #099; */
+            margin: -8px 0 -10px;
+        }
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+        .logo {
+            padding: 10px 5px;
+            display: flex;
+            width: 100%;
+            /* cursor: none; */
+        }
 
+        #helal-logo {
+            background-color: #000;
+            opacity: 0.7;
 
-}
-.word {
-    padding: 0 0.3em;
-    margin: 4px 10px; 
-    font-size: 1.3em;
+        }
 
-    border-left: 2px solid #e6e6e6;
-    border-bottom: 2px solid #e6e6e6;
-    border-radius: 20%;
-    cursor: pointer;
-    /* color: ; */
-    user-select: none;
+        .head {
+            font-size: 1.3em;
+            /* padding-left: 50%; */
+            /* margin-left: calc( / 2 ); */
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
 
-}
-.word:active {
-    background-color: #23222f;
-    color:#fff;
+        /* End Styles for the header */
+        /* ----------------------------- */
+        /* ----------------------------- */
 
-    border-top: 2px solid #e6e6e6;
-    border-right: 2px solid #e6e6e6;
-}
-#clear {
-    background-color: #de0000;
-    color: #fcf;
-    position: absolute;
-    bottom: -20px;
-    padding: 1px 0.1em;
-    
-    border-left: 2px solid #f55353;
-    border-bottom: 2px solid #f55353;
+        /* Start styles for the output screen */
+        /* Screen for show the count number */
+        .screen {
+            padding: 10px 50px;
+            font-weight: bolder;
+            text-align: center;
+            cursor: none;
+            user-select: none;
+
+            /* border: 2px solid red; */
+            /* background-color: rgb(44, 38, 38); */
+            background-color: rgb(64, 58, 58);
 
 
-}
-#clear:active {
-    border-top: 2px solid #f55353;
-    border-right: 2px solid #f55353;
+        }
 
-    padding: 0 0.2em;
+        .screen p:first-child {
+            font-size: 1em;
+        }
 
-}
-.footer {
-    padding: 16px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-   /*  width: 480px; */
-    background-color: #000;
-    border-radius: 22px;
+        .screen p:last-child {
+            font-size: 3em;
 
-}
-.footer p {
-    text-align: right;
-    font-size: 0.7em;
-    text-align: center;
-    color: whitesmoke;
+        }
 
+        /* End Styles for the output screen  */
+        /* ---------------------------------------- */
+        /* Sub-container of the words */
+        .cards {
+            position: relative;
+            height: 20%;
+            width: 100%;
+            padding: 30px 0;
+            /* background-color: #099; */
 
-}
-ul {
-    list-style: none;
-    text-align: center;
-}
-#telephone {
-    font-size: 10pt;
-    color: blue;
-    text-decoration: none;
-    /* margin-top: 10px; */
-
-}
-
-#telephone:hover {
-    font-size: 12pt;
-    text-shadow: #0000fc 3px 3px 5px;
-    transition: ease 0.2s all;
-
-}
-#telephone img {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 8px;
-    opacity: 0.85;
-}
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
 
 
+        }
+
+        .word {
+            padding: 0 0.3em;
+            margin: 4px 10px;
+            font-size: 1.3em;
+
+            border-left: 2px solid #e6e6e6;
+            border-bottom: 2px solid #e6e6e6;
+            border-radius: 20%;
+            cursor: pointer;
+            /* color: ; */
+            user-select: none;
+
+        }
+
+        .word:active {
+            background-color: #23222f;
+            color: #fff;
+
+            border-top: 2px solid #e6e6e6;
+            border-right: 2px solid #e6e6e6;
+        }
+
+        #clear {
+            background-color: #de0000;
+            color: #fcf;
+            position: absolute;
+            bottom: -20px;
+            padding: 1px 0.1em;
+
+            border-left: 2px solid #f55353;
+            border-bottom: 2px solid #f55353;
+
+
+        }
+
+        #clear:active {
+            border-top: 2px solid #f55353;
+            border-right: 2px solid #f55353;
+
+            padding: 0 0.2em;
+
+        }
+
+        .footer {
+            padding: 16px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            /*  width: 480px; */
+            background-color: #000;
+            border-radius: 22px;
+
+        }
+
+        .footer p {
+            text-align: right;
+            font-size: 0.7em;
+            text-align: center;
+            color: whitesmoke;
+
+
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        #telephone {
+            font-size: 10pt;
+            color: blue;
+            text-decoration: none;
+            /* margin-top: 10px; */
+
+        }
+
+        #telephone:hover {
+            font-size: 12pt;
+            text-shadow: #0000fc 3px 3px 5px;
+            transition: ease 0.2s all;
+
+        }
+
+        #telephone img {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 8px;
+            opacity: 0.85;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Start of the main container -->
         <div id="version">Version 2</div>
         <div class="logo">
-            <img src="./images/Helal-logo.jpg" alt="Helal Logo" width="40px" id="helal-logo">
+            <img src="./images/logo.jpg" alt="Helal Logo" width="40px" id="helal-logo">
             <span class="head">التسبيح بعد الصلاة</span>
         </div>
         <!-- Output screen -->
@@ -258,163 +279,179 @@ ul {
         <div class="cards">
             <div class="word">الله أكبر</div>
             <div class="word">الحمد لله</div>
-                <div class="word">سبحان الله</div>
-                <div  class="word" id="clear">مسح</div>
-            </div>
+            <div class="word">سبحان الله</div>
+            <div class="word" id="clear">مسح</div>
+        </div>
 
         <!-- End of the main container -->
     </div>
     <div class="footer">
         <p>
-            تم بواسطه &copy;أحمد أسامه 
+            تم بواسطه &copy;أحمد أسامه
         </p>
         <p>:تواصل معي عبر هذا الإيميل</p>
         <ul>
             <li>
-                <li id="telephone">
-                    <img src="../images/gmail-icon.png" alt="">
-                    <span>ahmadosama.2011@gmail.com</span></li>
+            <li id="telephone">
+                <img src="../images/gmail-icon.png" alt="">
+                <span>ahmadosama.2011@gmail.com</span>
+            </li>
             </li>
         </ul>
     </div>
 
-    
+
 
     <script>
         /**
  * Start adding functionality to the webpage
  */
 
-/**
- * Start with global variables
- */
-let count = 0;
-// Get the three words, the clear button
-const word = document.getElementsByClassName('word');
-const clearBtn = document.getElementById('clear');
-// Get the output screen to print out the output
-const screen = document.getElementsByClassName('screen')[0];
-const notify = document.getElementById('notify');
-const currentWord = document.getElementById('curent-word');
-const counter = document.getElementById('counter');
-/**
- * End with global variables 
-*/  
+        /**
+         * Start with global variables
+         */
+        let count = 0;
+        // Get the three words, the clear button
+        const word = document.getElementsByClassName('word');
+        const clearBtn = document.getElementById('clear');
+        // Get the output screen to print out the output
+        const screen = document.getElementsByClassName('screen')[0];
+        const notify = document.getElementById('notify');
+        const currentWord = document.getElementById('curent-word');
+        const counter = document.getElementById('counter');
+        /**
+         * End with global variables 
+        */
 
-/** 
- *  Add vibration function when click the buttons
- */
-function vibrate(t) {
-    navigator.vibrate(t);
-};
-/** 
- *  End with Add vibration function when click the buttons
- */
+        /** 
+         *  Add vibration function when click the buttons
+         */
+        function vibrate(t) {
+            navigator.vibrate(t);
+        };
+        /** 
+         *  End with Add vibration function when click the buttons
+         */
 
-/**
- * Start making an event listeners to the buttons "Words"
- */
-word[0].addEventListener('click', (e) => {
-    vibrate(30);
-});
-word[1].addEventListener('click', (e) => {
-    vibrate(30);
-});
-word[2].addEventListener('click', (e) => {
-    vibrate(30);
-});
+        /**
+         * Start making an event listeners to the buttons "Words"
+         */
+        word[0].addEventListener('click', (e) => {
+            vibrate(30);
+        });
+        word[1].addEventListener('click', (e) => {
+            vibrate(30);
+        });
+        word[2].addEventListener('click', (e) => {
+            vibrate(30);
+        });
 
-clearBtn.addEventListener('click', (e) => {
-    vibrate(45);
-});
-/**
- * End making an event listeners to the buttons "Words"
- */
-
-
-/**
- * Adding function to the clear button
- */
-clearBtn.addEventListener('click', (event) => {
-    currentWord.innerText = "";
-    counter.innerText = '0';
-    notify.innerText = "";
-    count = 0;
-} )
-/**
- * End Adding function to the clear button
- */
-
-/**
- * Start make the counter 
- */
-word[0].addEventListener('click', (event) => {
-    currentWord.innerText = word[0].innerText;
-    increment();
-    max33();
-    // Adding new sentence
-    finalWord();
- 
-});
-
-word[1].addEventListener('click', (event) => {
-    currentWord.innerText = word[1].innerText;
-    increment();
-    max33();
-   
-});
-word[2].addEventListener('click', (event) => {
-    currentWord.innerText = word[2].innerText;
-    increment();
-    max33();
-   
-});
+        clearBtn.addEventListener('click', (e) => {
+            vibrate(45);
+        });
+        /**
+         * End making an event listeners to the buttons "Words"
+         */
 
 
-/**
- * Start making function for the counter
- */
-// Increamnet function 
+        /**
+         * Adding function to the clear button
+         */
+        clearBtn.addEventListener('click', (event) => {
+            currentWord.innerText = "";
+            counter.innerText = '0';
+            notify.innerText = "";
+            count = 0;
+        })
+        /**
+         * End Adding function to the clear button
+         */
 
-function increment() {
-    count += 1;
-    if (count == 33) {
-        counter.innerText = '33';
-    };   
-    counter.innerText = count;
-};
+        /**
+         * Start make the counter 
+         */
+        word[0].addEventListener('click', (event) => {
+            currentWord.innerText = word[0].innerText;
+            increment();
+            max33();
+            // Adding new sentence
+            finalWord();
 
-// Function to make sure you reached the maximum value 
-function max33() {
-    if (count == 33) {
-        // counter.innerText = '33';
-        count = 0;
-        notify.innerText = (`لقد انتهيت من عدد  ${currentWord.innerText}`);
-        currentWord.innerText = "";
-        vibrate(25);
+        });
+
+        word[1].addEventListener('click', (event) => {
+            currentWord.innerText = word[1].innerText;
+            increment();
+            max33();
+
+        });
+        word[2].addEventListener('click', (event) => {
+            currentWord.innerText = word[2].innerText;
+            increment();
+            max33();
+
+        });
 
 
-    }
-    
+        /**
+         * Start making function for the counter
+         */
+        // Increamnet function 
 
-};
-// Adding new feature => The final sentence at 100
-function finalWord() {
-    if (
-        count == 0
-    ) {
-        currentWord.innerText = "لا تنسى ذكر 'لا اله الا الله وحده لا شريك له، له الملك و له الحمد و هو على كل شئ قدير'";
-    }
-};
+        function increment() {
+            count += 1;
+            if (count == 33) {
+                counter.innerText = '33';
+            };
+            counter.innerText = count;
+        };
 
-/**
- * End with function for the counter
- */
+        // Function to make sure you reached the maximum value 
+        function max33() {
+            if (count == 33) {
+                // counter.innerText = '33';
+                count = 0;
+                notify.innerText = (`لقد انتهيت من عدد  ${currentWord.innerText}`);
+                currentWord.innerText = "";
+                vibrate(25);
 
-/**
- * End of the script
- */
+
+            }
+
+
+        };
+        // Adding new feature => The final sentence at 100
+        function finalWord() {
+            if (
+                count == 0
+            ) {
+                currentWord.innerText = "لا تنسى ذكر 'لا اله الا الله وحده لا شريك له، له الملك و له الحمد و هو على كل شئ قدير'";
+            }
+        };
+
+        /**
+         * End with function for the counter
+         */
+
+        /**
+         * End of the script
+         */
 
     </script>
+
+    <!-- ================== PWA ========================= -->
+    <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            deferredPrompt = e;
+        });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
+        }
+    </script>
+    <!-- ===================================================== -->
 </body>
+
 </html>
