@@ -1,9 +1,9 @@
 {
     "name": "خاتم التسبيح",
     "short_name": "خاتم التسبيح",
+    "id": " V2 خاتم التسبيح",
+    "start_url": "/?source=pwa",
 
-    "start_url": "./",
-    
     "icons": [
       {
         "src": "icons/manifest-icon-192.maskable.png",

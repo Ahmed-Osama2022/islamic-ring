@@ -1,9 +1,8 @@
 {
     "name": "خاتم التسبيح",
     "short_name": "خاتم التسبيح",
-
-    "id": "/?source=pwa",
-    "start_url": "/",
+    "id": " خاتم التسبيح",
+    "start_url": "/?source=pwa",
     
     "icons": [
       {
