@@ -2,8 +2,7 @@
     "name": "خاتم التسبيح",
     "short_name": "خاتم التسبيح",
 
-    "id": "/?source=pwa",
-    "start_url": "/?source=pwa",
+    "start_url": "./",
     
     "icons": [
       {
