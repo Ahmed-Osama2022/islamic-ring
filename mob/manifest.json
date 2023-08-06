@@ -1,7 +1,9 @@
 {
     "name": "خاتم التسبيح",
     "short_name": "خاتم التسبيح",
-    "start_url": "https://ahmed-osama2022.github.io/islamic-ring/mob/",
+
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
     
     "icons": [
       {
