@@ -8,15 +8,21 @@
     <meta name="keywords" content="خاتم تسبيح الكتروني, خاتم تسبيح, تسبيح">
     <meta name="author" content="Ahmed Osama Elsayed">
     <!-- <meta http-equiv="refresh" content="2"> -->
-    <link rel="icon" href="./images/Helal-logo.jpg">
+    <link rel="icon" href="./images/logo.jpg">
     <link rel="stylesheet" href="./css/styles.css">
+
+
+    <!-- ================== PWA ========================= -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <!-- ===================================================== -->
     <title>خاتم التسبيح</title>
 </head>
 <body>
     <div class="container">
         <!-- Start of the main container -->
         <div class="logo">
-            <img src="./images/Helal-logo.jpg" alt="Helal Logo" width="40px" id="helal-logo">
+            <img src="./images/logo.jpg" alt="Helal Logo" width="40px" id="helal-logo">
             <span class="head">التسبيح بعد الصلاة</span>
         </div>
         <!-- Output screen -->
@@ -51,5 +57,19 @@
     
 
     <script src="./js/main.js"></script>
+
+      <!-- ================== PWA ========================= -->
+      <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            deferredPrompt = e;
+        });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
+        }
+    </script>
+    <!-- ===================================================== -->
 </body>
 </html>
