@@ -12,14 +12,10 @@ const staticCacheName = 'site-static-v1';
 const assets = [
     '/',
     '/index.html',
+    '/main.js',
+    '/style.css',
     '/images/logo.png',
-    '/Noto_Naskh_Arabic/NotoNaskhArabic-VariableFont_wght.ttf',
-    '/Noto_Naskh_Arabic/OFL.txt',
-    '/Noto_Naskh_Arabic/static/NotoNaskhArabic-Regular.ttf',
-    '/Noto_Naskh_Arabic/static/NotoNaskhArabic-Medium.ttf',
-    '/Noto_Naskh_Arabic/static/NotoNaskhArabic-Bold.ttf',
-    '/Noto_Naskh_Arabic/static/NotoNaskhArabic-SemiBold.ttf',
-    '/images/gmail-icon.png',
+    '/images/watch.jpg',
 ];
 
 self.addEventListener('install', evt => {
